@@ -7,9 +7,9 @@ labels: []
 
 ## ⚠️ Mac-only / Apple / device steps (fill in FIRST, or write "None")
 <!-- Claude (headless relay) can build, test and use the per-job simulator on the Mac mini. It can NOT:
-     upload to TestFlight / App Store Connect, click developer.apple.com, or use a physical iPhone. -->
+     upload to TestFlight / App Store Connect (Cassie only, separate issue), click developer.apple.com, or use a physical iPhone. -->
 - [ ] Needs the Mac mini (Xcode build, simulator, archive, local .ipa)? → label `needs-mac` — **yes / no**
-- [ ] Needs TestFlight / App Store Connect upload or submission? → Cassie does it, label `needs-cassie` — **yes / no**
+- [ ] **TestFlight / App Store Connect upload is NEVER part of this job** (Daniel, Oct 16 2026). Cassie (AppStoreConnect) owns every upload. Stop at the version-bump PR. After it merges, the PM opens a separate "Cassie TestFlight handoff" issue labeled `needs-mac` + `needs-cassie` (and `bot:cassie` if the repo has that label). Does this job end in a build Cassie will upload? — **yes / no**
 - [ ] Needs developer.apple.com screens (App IDs, capabilities, iCloud)? → `needs-cassie` — **yes / no**
 - [ ] Needs a physical iPhone or Daniel's decision? → `needs-daniel` — **yes / no**
 - [ ] Any money, sign-up, or public text (store copy, posts)? → stop: CFO / Legal first — **yes / no**
